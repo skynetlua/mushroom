@@ -87,7 +87,7 @@ make
 
 ## 简单的实例
 。客户端和服务端写到一起。客户端（boy）邀请服务器（girl）吃饭。
-```
+```C
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
