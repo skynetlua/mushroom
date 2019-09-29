@@ -15,8 +15,8 @@ else()
 SET(CMAKE_C_FLAGS "-g -Wall")
 endif()
 
-#file(COPY "${PROJECT_SOURCE_DIR}/mrsocket/mr_buffer.h" DESTINATION  "${PROJECT_SOURCE_DIR}/include")
-#file(COPY "${PROJECT_SOURCE_DIR}/mrsocket/mr_code.h" DESTINATION  "${PROJECT_SOURCE_DIR}/include")
+file(COPY "${PROJECT_SOURCE_DIR}/mrtool/mr_buffer.h" DESTINATION  "${PROJECT_SOURCE_DIR}/include")
+file(COPY "${PROJECT_SOURCE_DIR}/mrtool/mr_code.h" DESTINATION  "${PROJECT_SOURCE_DIR}/include")
 
 file(COPY "${PROJECT_SOURCE_DIR}/mrsocket/mr_mem.h" DESTINATION  "${PROJECT_SOURCE_DIR}/include")
 file(COPY "${PROJECT_SOURCE_DIR}/mrsocket/mr_socket.h" DESTINATION  "${PROJECT_SOURCE_DIR}/include")
@@ -25,7 +25,7 @@ file(COPY "${PROJECT_SOURCE_DIR}/mrsocket/mrsocket.h" DESTINATION  "${PROJECT_SO
 
 SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib CACHE PATH "Single directory for all static libraries.")
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib CACHE PATH "Single directory for all dynamic libraries.")
-#SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Single directory for all executable.")
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin CACHE PATH "Single directory for all executable.")
 
 SET(LIBMRSOCKET mrsocket)
 SET(LIBMRTOOL mrtool)
@@ -44,12 +44,16 @@ endif()
 
 
 #demo例子
+#demo
+add_executable(demo demo.c)
+target_link_libraries(demo ${LIBMRSOCKET} ${LIBMRTOOL})
+
 #客户端
 add_executable(demo_client demo_client.c)
-target_link_libraries(demo_client ${LIBMRSOCKET})
+target_link_libraries(demo_client ${LIBMRSOCKET} ${LIBMRTOOL})
 #服务端
 add_executable(demo_server demo_server.c)
-target_link_libraries(demo_server ${LIBMRSOCKET})
+target_link_libraries(demo_server ${LIBMRSOCKET} ${LIBMRTOOL})
 
 
 #examples文件夹的测试例子
