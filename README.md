@@ -85,8 +85,8 @@ make
 ```
 编译完成后。在mushroom目录下会生成三个文件夹。bin、include和lib。直接把include和lib导入到工程就可以使用mushroom框架。bin文件夹内含一些测试程序。
 
-## 简单教程
-一个简单的实例。客户端和服务端写到一起。客户端（boy）邀请服务器（girl）吃饭。
+## 简单的实例
+。客户端和服务端写到一起。客户端（boy）邀请服务器（girl）吃饭。
 ```
 #include <stdio.h>
 #include <string.h>
