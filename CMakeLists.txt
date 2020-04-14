@@ -51,11 +51,11 @@ target_link_libraries(demo ${LIBMRSOCKET} ${LIBMRTOOL})
 #examples文件夹的测试例子
 #demo例子
 #客户端
-add_executable(demo_client examples/demo/demo_client.c)
-target_link_libraries(demo_client ${LIBMRSOCKET} ${LIBMRTOOL})
+#add_executable(demo_client examples/demo/demo_client.c)
+#target_link_libraries(demo_client ${LIBMRSOCKET} ${LIBMRTOOL})
 #服务端
-add_executable(demo_server examples/demo/demo_server.c)
-target_link_libraries(demo_server ${LIBMRSOCKET} ${LIBMRTOOL})
+#add_executable(demo_server examples/demo/demo_server.c)
+#target_link_libraries(demo_server ${LIBMRSOCKET} ${LIBMRTOOL})
 
 #tcp例子
 #tcp客户端
