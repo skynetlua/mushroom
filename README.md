@@ -1,5 +1,5 @@
 # mushroom
-
+废弃，请见https://github.com/openlinyou/opensocket
 ## 介绍
 5G、大数据浪潮来袭。对设备与设备的通信提出了更高要求。为此开发了这个高性能高并发的网络框架。
 
